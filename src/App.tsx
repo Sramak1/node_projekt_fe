@@ -4,6 +4,7 @@ import Home from "./pages/Home.tsx";
 import Register from "./pages/Register.tsx";
 import Login from "./pages/Login.tsx";
 import Wrapper from "./components/Wrapper.tsx";
+import CreateTask from "./pages/createTask.tsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path={'/'} element={<Home/>}/>
           <Route path={'/Login'} element={<Login/>}/>
           <Route path={'/Register'} element={<Register/>}/>
+            <Route path={'/create'} element={<CreateTask/>}/>
         </Routes>
       </BrowserRouter>
         </Wrapper>
