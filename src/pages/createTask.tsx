@@ -1,10 +1,11 @@
 import {SyntheticEvent, useEffect, useState} from "react";
 import axios from "axios";
-import {Navigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 const style = {
     height:"100%"
 }
 const CreateTask = () => {
+    const navigate = useNavigate();
     const [title,setTitle] = useState('');
     const [content, setContent] = useState('');
     const [category_id,setCategory] = useState(1);
@@ -36,7 +37,7 @@ const CreateTask = () => {
             setRedirect(true);
         }
         if(redirect){
-            return <Navigate to='/'/>
+            navigate('/');
         }
     }
   return(
