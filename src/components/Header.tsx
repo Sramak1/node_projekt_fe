@@ -1,4 +1,11 @@
+import axios from "axios";
+
 const Header = () => {
+    const logout=async ()=>{
+        const res = await axios.post('http://localhost:3000/auth/logout',{withCredentials:true});
+        console.log(res);
+
+    }
   return(
       <>
           <div className="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
@@ -65,6 +72,7 @@ const Header = () => {
                                   <li><a href="/login" className="text-white">Login</a></li>
                                   <li><a href="/register" className="text-white">Register</a></li>
                                   <li><a href="/create" className="text-white">Create task</a></li>
+                                  <li><p className="text-white" onClick={logout}>Logout</p></li>
                               </ul>
                           </div>
                       </div>
