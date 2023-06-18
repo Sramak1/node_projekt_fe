@@ -11,7 +11,7 @@ interface Props{
 const Task:FC<Props> = ({title,content,category,id}) => {
 
     const upvote = async (taskId:number)=>{
-        const res = await axios.post(`http://localhost:3000/task/upvote/${taskId}`,{withCredentials:true});
+        const res = await axios.get(`http://localhost:3000/task/upvote/${taskId}`,{withCredentials:true});
         console.log(res);
     }
     const deleteFunction = async (taskId:number) =>{
