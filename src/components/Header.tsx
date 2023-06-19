@@ -2,7 +2,7 @@ import axios from "axios";
 
 const Header = () => {
     const logout=async ()=>{
-        const res = await axios.post('http://localhost:3000/auth/logout',{withCredentials:true});
+        const res = await axios.get('http://localhost:3000/auth/logout',{withCredentials:true});
         console.log(res);
 
     }
