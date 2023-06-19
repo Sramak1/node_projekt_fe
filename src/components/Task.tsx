@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, useState} from "react";
 import axios from "axios";
 import {Navigate} from "react-router-dom";
 
@@ -9,15 +9,18 @@ interface Props{
     id:number
 }
 const Task:FC<Props> = ({title,content,category,id}) => {
-
+    const [redirect,setRedirect] = useState(false);
     const upvote = async (taskId:number)=>{
-        const res = await axios.get(`http://localhost:3000/task/upvote/${taskId}`,{withCredentials:true});
+        const res = await axios.post(`http://localhost:3000/vote/upvote/${taskId}`,taskId,{withCredentials:true});
         console.log(res);
     }
     const deleteFunction = async (taskId:number) =>{
         const res = await axios.delete(`http://localhost:3000/task/${taskId}`,{withCredentials:true});
         console.log(res);
-        if (res.status==200){
+        if(res.status == 201){
+            setRedirect(true);
+        }
+        if(redirect){
             return <Navigate to={'/'}/>;
         }
     }

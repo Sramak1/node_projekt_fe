@@ -33,7 +33,7 @@ const CreateTask = () => {
         };
         console.log(data);
         const res = await axios.post('http://localhost:3000/task',data,{withCredentials:true});
-        if(res.status == 201){
+        if(res.status == 200){
             setRedirect(true);
         }
         if(redirect){
