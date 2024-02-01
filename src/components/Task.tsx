@@ -6,9 +6,10 @@ interface Props{
     title:string,
     content:string,
     category:string,
-    id:number
+    id:number,
+    karma:number
 }
-const Task:FC<Props> = ({title,content,category,id}) => {
+const Task:FC<Props> = ({title,content,category,id,karma}) => {
     const [redirect,setRedirect] = useState(false);
     const upvote = async (taskId:number)=>{
         const res = await axios.post(`http://localhost:3000/vote/upvote/${taskId}`,taskId,{withCredentials:true});
@@ -23,19 +24,24 @@ const Task:FC<Props> = ({title,content,category,id}) => {
         if(redirect){
             return <Navigate to={'/'}/>;
         }
+        window.location.reload();
     }
 
   return(
       <>
           <div className="col">
-              <div className="card shadow-sm">
-                  <h1>{title}</h1>
-                  <p className="card-text">{category}</p>
+              <div style={{backgroundColor:"lightgray"}} className="card shadow-sm">
+                  <h1 style={{fontFamily:"Gill Sans", textAlign:"center"}}>{title}</h1>
+                  <p style={{fontSize:"20px"}} className="card-text">Kategorija: {category}</p>
+                  <p style={{fontSize:"20px"}} className="card-text">Glasovi: {karma}</p>
+                  <hr></hr>
                   <div className="card-body">
-                      <p className="card-text">{content}</p>
+                      <p style={{fontSize:"20px", textAlign:"center"}} className="card-text">{content}</p>
                       <div className="d-flex justify-content-between align-items-center">
                               <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>upvote(id)}>Vote
                               </button>
+                          <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>deleteFunction(id)}>Edit
+                          </button>
                               <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>deleteFunction(id)}>Delete
                               </button>
                       </div>

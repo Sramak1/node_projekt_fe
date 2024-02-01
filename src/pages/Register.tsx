@@ -50,37 +50,37 @@ const Register = () => {
           <main className="form-signin w-100 m-auto">
               <h2 className = "error">{errorText}</h2>
               <form onSubmit={submit}>
-                  <h1 className="h3 mb-3 fw-normal">Please register</h1>
+                  <h1 className="h3 mb-3 fw-normal">Registracija</h1>
                   <div className="form-floating">
                       <input type="text" className="form-control" id="floatingInput"
                              placeholder="Input your first name"
                              onChange={(e)=>setFirstName(e.target.value)}/>
-                      <label htmlFor="floatingInput">First name</label>
+                      <label htmlFor="floatingInput">Ime</label>
                   </div>
                   <div className="form-floating">
                       <input type="text" className="form-control" id="floatingInput"
                              placeholder="Imput your last name"
                              onChange={(e)=>setLastName(e.target.value)}/>
-                      <label htmlFor="floatingInput">Last name</label>
+                      <label htmlFor="floatingInput">Priimek</label>
                   </div>
                   <div className="form-floating">
                       <input type="email" className="form-control" id="floatingInput"
                              placeholder="name@example.com"
                              onChange={(e)=>setEmail(e.target.value)}/>
-                      <label htmlFor="floatingInput">Email address</label>
+                      <label htmlFor="floatingInput">Email</label>
                   </div>
                   <div className="form-floating">
                       <input type="password" className="form-control" id="floatingPassword" placeholder="Password"
                              onChange={(e)=>setPassword1(e.target.value)}/>
-                      <label htmlFor="floatingPassword">Password</label>
+                      <label htmlFor="floatingPassword">Geslo</label>
                   </div>
                   <div className="form-floating">
                       <input type="password" className="form-control" id="floatingPassword" placeholder="Password"
                              onChange={(e)=>setPassword2(e.target.value)}/>
-                      <label htmlFor="floatingPassword">Repeat password</label>
+                      <label htmlFor="floatingPassword">Ponovite geslo</label>
                   </div>
 
-                  <button className="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+                  <button className="w-100 btn btn-lg btn-primary" type="submit">Registracija</button>
               </form>
           </main>
       </>

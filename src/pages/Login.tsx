@@ -41,19 +41,19 @@ const Login = () => {
           <main className="form-signin w-100 m-auto">
               <h2 className="error">{errorText}</h2>
               <form onSubmit={submit}>
-                  <h1 className="h3 mb-3 fw-normal">Please login</h1>
+                  <h1 className="h3 mb-3 fw-normal">Vpis</h1>
                   <div className="form-floating">
                       <input type="email" className="form-control" id="floatingInput"
                              placeholder="name@example.com"
                              onChange={(e)=>setEmail(e.target.value)}/>
-                      <label htmlFor="floatingInput">Email address</label>
+                      <label htmlFor="floatingInput">Email</label>
                   </div>
                   <div className="form-floating">
                       <input type="password" className="form-control" id="floatingPassword" placeholder="Password"
                              onChange={(e)=>setPassword(e.target.value)}/>
-                      <label htmlFor="floatingPassword">Password</label>
+                      <label htmlFor="floatingPassword">Geslo</label>
                   </div>
-                  <button className="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+                  <button className="w-100 btn btn-lg btn-primary" type="submit">Vpis</button>
               </form>
           </main>
       </>

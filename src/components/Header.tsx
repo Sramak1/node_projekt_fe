@@ -4,22 +4,12 @@ const Header = () => {
     const logout=async ()=>{
         const res = await axios.get('http://localhost:3000/auth/logout',{withCredentials:true});
         console.log(res);
+        window.location.reload();
 
     }
   return(
       <>
           <div className="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-              <button className="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-                      id="bd-theme"
-                      type="button"
-                      aria-expanded="false"
-                      data-bs-toggle="dropdown"
-                      aria-label="Toggle theme (auto)">
-                  <svg className="bi my-1 theme-icon-active" width="1em" height="1em">
-                      <use href="#circle-half"></use>
-                  </svg>
-                  <span className="visually-hidden" id="bd-theme-text">Toggle theme</span>
-              </button>
               <ul className="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
                   <li>
                       <button type="button" className="dropdown-item d-flex align-items-center"
@@ -68,11 +58,11 @@ const Header = () => {
                           <div className="col-sm-4 offset-md-1 py-4">
                               <h4>Navigate</h4>
                               <ul className="list-unstyled">
-                                  <li><a href="/" className="text-white">Home</a></li>
-                                  <li><a href="/login" className="text-white">Login</a></li>
-                                  <li><a href="/register" className="text-white">Register</a></li>
-                                  <li><a href="/create" className="text-white">Create task</a></li>
-                                  <li><p className="text-white" onClick={logout}>Logout</p></li>
+                                  <li><a href="/" className="text-white">Domov</a></li>
+                                  <li><a href="/login" className="text-white">Vpis</a></li>
+                                  <li><a href="/register" className="text-white">Registracija</a></li>
+                                  <li><a href="/create" className="text-white">Ustvari opravilo</a></li>
+                                  <li><a className="text-white" onClick={logout}>Izpis</a></li>
                               </ul>
                           </div>
                       </div>
@@ -80,15 +70,6 @@ const Header = () => {
               </div>
               <div className="navbar navbar-dark bg-dark shadow-sm">
                   <div className="container">
-                      <a href="#" className="navbar-brand d-flex align-items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                               strokeLinecap={"round"}  strokeLinejoin={"round"} strokeWidth={"2"} aria-hidden="true"
-                               className="me-2" viewBox="0 0 24 24">
-                              <path
-                                  d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-                              <circle cx="12" cy="13" r="4"/>
-                          </svg>
-                      </a>
                       <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                               data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false"
                               aria-label="Toggle navigation">

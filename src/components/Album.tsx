@@ -18,7 +18,7 @@ const Album = () => {
 
                   <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                       {card.map((task:any)=>{
-                          return (<Task key={task.id} title={task.title} content={task.content} category={task.category.title} id={task.id}/>)
+                          return (<Task key={task.id} title={task.title} content={task.content} category={task.category.title} id={task.id} karma={task.karma}/>)
                       })}
                   </div>
               </div>
