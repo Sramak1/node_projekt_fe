@@ -5,6 +5,7 @@ import Register from "./pages/Register.tsx";
 import Login from "./pages/Login.tsx";
 import Wrapper from "./components/Wrapper.tsx";
 import CreateTask from "./pages/createTask.tsx";
+import UpdateTask from "./pages/updateTask.tsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path={'/Login'} element={<Login/>}/>
           <Route path={'/Register'} element={<Register/>}/>
             <Route path={'/create'} element={<CreateTask/>}/>
+            <Route path={'/update'} element={<UpdateTask/>}/>
         </Routes>
       </BrowserRouter>
         </Wrapper>

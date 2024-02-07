@@ -1,6 +1,6 @@
 import {FC, useState} from "react";
 import axios from "axios";
-import {Navigate} from "react-router-dom";
+import {Link, Navigate} from "react-router-dom";
 
 interface Props{
     title:string,
@@ -40,8 +40,7 @@ const Task:FC<Props> = ({title,content,category,id,karma}) => {
                       <div className="d-flex justify-content-between align-items-center">
                               <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>upvote(id)}>Vote
                               </button>
-                          <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>deleteFunction(id)}>Edit
-                          </button>
+                          <Link to={"/update"} state={{data:id}}><button type="button" className="btn btn-sm btn-outline-secondary">Edit</button></Link>
                               <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>deleteFunction(id)}>Delete
                               </button>
                       </div>
