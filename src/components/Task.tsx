@@ -3,9 +3,9 @@ import axios from "axios";
 import {Link, Navigate} from "react-router-dom";
 
 interface Props{
-    title:string,
+    title?:string,
     content:string,
-    category:string,
+    category?:string,
     id:number,
     karma:number
 }

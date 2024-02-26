@@ -1,6 +1,7 @@
 import {FC, SyntheticEvent, useEffect, useState} from "react";
 import axios from "axios";
 import {Navigate, useLocation, useNavigate} from "react-router-dom";
+import {parse} from "@typescript-eslint/parser";
 const style = {
     height:"100%"
 }
@@ -10,7 +11,7 @@ const UpdateTask:FC = () =>{
    const id = location.state.data;
     const [title,setTitle] = useState('');
     const [content, setContent] = useState('');
-    const [category_id,setCategory] = useState(1);
+    const [category_Id,setCategory] = useState('');
 
     const [errorText] = useState('');
     const [redirect,setRedirect] = useState(false);
@@ -27,13 +28,12 @@ const UpdateTask:FC = () =>{
     const submit = async (e:SyntheticEvent)=> {
         e.preventDefault();
 
-
+        const category_id = parseInt(category_Id);
         const data = {
             title,
             content,
             category_id,
         };
-        console.log(id);
         const res = await axios.patch(`http://localhost:3000/task/${id}`,data,{withCredentials:true});
         if(res.status == 200){
             setRedirect(true);

@@ -51,7 +51,7 @@ const Header = () => {
           </div>
 
 
-          <header data-bs-theme="dark" style={{position:"fixed"}}>
+          <header data-bs-theme="dark">
               <div className="collapse text-bg-dark" id="navbarHeader">
                   <div className="container">
                       <div className="row">
