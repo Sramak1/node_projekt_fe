@@ -53,7 +53,7 @@ const Login = () => {
                              onChange={(e)=>setPassword(e.target.value)}/>
                       <label htmlFor="floatingPassword">Geslo</label>
                   </div>
-                  <button className="w-100 btn btn-lg btn-primary" type="submit">Vpis</button>
+                  <button className="w-100 btn btn-lg btn-primary" type="submit" style={{backgroundColor:"gray"}}>Vpis</button>
               </form>
           </main>
       </>

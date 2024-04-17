@@ -68,3 +68,16 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.navigation-div {
+  position: fixed;
+  top: 0;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: dimgray;
+  padding: 0px 5px 0 15px;
+  z-index: 1000;
+}

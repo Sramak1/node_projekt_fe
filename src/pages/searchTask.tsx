@@ -8,17 +8,16 @@ const SearchTask =()=>{
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const searchValue = queryParams.get('q');
-    console.log(searchValue);
     const getSearch = async (search:string)=>{
         const postSearch = await axios.post('http://localhost:3000/task/search', {search:search}, {withCredentials:true, headers:{"Content-Type":"application/json"}});
         console.log(postSearch);
         setCard(postSearch.data);
+
     }
-    console.log(card[0]?.title);
     useEffect(()=>{
         getSearch(searchValue!)},[]);
     return <>
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style={{display:"flex", justifyContent:"center", alignItems:"center", margin:20}}>
             {card && card.length>0 ? (
                 <>
                     <div>

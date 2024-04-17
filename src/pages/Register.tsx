@@ -80,7 +80,7 @@ const Register = () => {
                       <label htmlFor="floatingPassword">Ponovite geslo</label>
                   </div>
 
-                  <button className="w-100 btn btn-lg btn-primary" type="submit">Registracija</button>
+                  <button className="w-100 btn btn-lg btn-primary" type="submit" style={{backgroundColor:"gray"}}>Registracija</button>
               </form>
           </main>
       </>
