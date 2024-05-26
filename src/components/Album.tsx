@@ -4,6 +4,7 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import task from "./Task.tsx";
 import {cardType} from "../models/cardType.ts";
+import Welcome from "./Welcome.tsx";
 
 
 const Album = () => {
@@ -70,6 +71,7 @@ const filterCreatedAt=async (event:any)=>{
 }
   return(
       <>
+          <Welcome></Welcome>
           <div className="album py-5 bg-body-tertiary">
               <div className="container">
                     <form onSubmit={handleSubmit} method='POST'>

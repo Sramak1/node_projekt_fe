@@ -17,6 +17,7 @@ const SearchTask =()=>{
     useEffect(()=>{
         getSearch(searchValue!)},[]);
     return <>
+
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style={{display:"flex", justifyContent:"center", alignItems:"center", margin:20}}>
             {card && card.length>0 ? (
                 <>
@@ -27,7 +28,7 @@ const SearchTask =()=>{
                 </>
             ):(
                 <>
-                <div><p>asd</p></div>
+                <div><p>Ni rezultatov</p></div>
                 </>
             )}
         </div>
