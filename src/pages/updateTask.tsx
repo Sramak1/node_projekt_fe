@@ -51,13 +51,13 @@ const UpdateTask:FC = () =>{
                     <h1 className="h3 mb-3 fw-normal">Posodobitev opravila</h1>
                     <div className="form-floating">
                         <input type="text" className="form-control" id="floatingInput"
-                               placeholder="Task title"
+                               placeholder="Opravilo"
                                onChange={(e)=>setTitle(e.target.value)}/>
                         <label htmlFor="floatingInput">Title</label>
                     </div>
                     <div className="form-floating">
                         <select className="form-control" id="floatingSelect"
-                                placeholder="Category"
+                                placeholder="Kategorija"
                                 onChange={(e)=>setCategory(e.target.value)}>
                             {categories.map((category:any)=>{
                                 return(<option value={category.id} key={category.id}>{category.title}</option>)})
