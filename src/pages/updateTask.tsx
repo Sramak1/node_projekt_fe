@@ -53,7 +53,7 @@ const UpdateTask:FC = () =>{
                         <input type="text" className="form-control" id="floatingInput"
                                placeholder="Opravilo"
                                onChange={(e)=>setTitle(e.target.value)}/>
-                        <label htmlFor="floatingInput">Title</label>
+                        <label htmlFor="floatingInput">Opravilo</label>
                     </div>
                     <div className="form-floating">
                         <select className="form-control" id="floatingSelect"
