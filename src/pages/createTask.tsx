@@ -49,7 +49,7 @@ const CreateTask = () => {
                   <h1 className="h3 mb-3 fw-normal">Opravilo</h1>
                   <div className="form-floating">
                       <input type="text" className="form-control" id="floatingInput"
-                             placeholder="Task title"
+                             placeholder="Opravilo"
                              onChange={(e)=>setTitle(e.target.value)}/>
                       <label htmlFor="floatingInput">Title</label>
                   </div>
