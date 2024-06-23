@@ -55,7 +55,7 @@ const CreateTask = () => {
                   </div>
                   <div className="form-floating">
                       <select className="form-control" id="floatingSelect"
-                              placeholder="Category"
+                              placeholder="Kategorija"
                               onChange={(e)=>setCategory(e.target.value)}>
                           {categories.map((category:any)=>{
                               return(<option value={category.id} key={category.id}>{category.title}</option>)})
