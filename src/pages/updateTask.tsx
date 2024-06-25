@@ -73,7 +73,7 @@ const UpdateTask:FC = () =>{
                       </textarea>
                         <label htmlFor="floatingContent">Navodilo</label>
                     </div>
-                    <button className="w-100 btn btn-lg btn-primary" type="submit" style={{backgroundColor:"gray"}}>Shrani</button>
+                    <button className="w-100 btn btn-lg btn-primary" type="submit" style={{backgroundColor:"blue"}}>Shrani</button>
                 </form>
             </main>
         </>
