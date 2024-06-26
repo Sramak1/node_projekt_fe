@@ -71,7 +71,7 @@ const filterCreatedAt=async (event:any)=>{
 }
   return(
       <>
-          <Welcome></Welcome>
+          <br/>
           <div className="album py-5 bg-body-tertiary">
               <div className="container">
                     <form onSubmit={handleSubmit} method='POST'>
